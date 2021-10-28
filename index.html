@@ -25,7 +25,7 @@
                 <li class="navbar__menu__item">Home</li>
                 <li class="navbar__menu__item">About</li>
                 <li class="navbar__menu__item">Skills</li>
-                <li class="navbar__menu__item">My work</li>
+                <li class="navbar__menu__item">Works</li>
                 <li class="navbar__menu__item">Contact</li>
             </ul>
         </div>
@@ -39,7 +39,7 @@
         <button class="home__contact">Contact to me</button>
     </section>
      <!-- about  -->
-    <section id="about">
+    <section id="about" class="section">
         <h1>About me</h1>
         <p> 장애인, 노인, 어린이와 같이 21세기 디지털 시대가 힘든 사람들이 있어요. <br/>
             저는 디지털 소외 계층들이 더 편하게 사용할 수 있는 웹을 만드는 개발자가 되고 싶어요.<br/>
@@ -49,71 +49,91 @@
                 <div class="major__icon">
                     <i class="fab fa-html5"></i>
                 </div>
-                <div class="major__title">
+                <h2 class="major__title">
                     HTML5
-                </div>
+                </h2>
                 <div class="major__description"></div>
             </div>
             <div class="major">
                 <div class="major__icon">
                     <i class="fab fa-css3"></i>
                 </div>
-                <div class="major__title">
+                <h2 class="major__title">
                     CSS3
-                </div>
+                </h2>
                 <div class="major__description"></div>
             </div>
             <div class="major">
                 <div class="major__icon">
                     <i class="fab fa-js"></i>
                 </div>
-                <div class="major__title">
+                <h2 class="major__title">
                     Javascript
-                </div>
+                </h2>
                 <div class="major__description"></div>
             </div>
-            <div class="about__jobs">
-                <div class="job">
-                    <img src="img/school_logo.png" alt="인하대학교 로고" class="job__logo">
+        </div>
+        <div class="about__jobs">
+            <div class="job">
+                <img src="img/school_logo.png" alt="인하대학교 로고" class="job__logo">
+                <div class="job__description">
                     <p class="job__name">인하대학교</p>
                     <p class="job__period">2017.03 ~ 2022.02</p>
                 </div>
             </div>
-            <div class="about__certificate">
-                <div class="certificate">
-                    <p class="certificate__title">정보처리기사</p>
-                    <p class="certificate__acquisitionDay">2021.06.02</p>
-                </div>
-                <div class="certificate">
-                    <p class="certificate__title">네트워크관리사</p>
-                    <p class="certificate__acquisitionDay">2021.04.13</p>
-                </div>
-                <div class="certificate">
-                    <p class="certificate__title">SQL개발자(SQLD)</p>
-                    <p class="certificate__acquisitionDay">2020.12.29</p>
-                </div>
+        </div>
+        <div class="about__certificates">
+            <div class="certificate">
+                <a href="http://www.q-net.or.kr/">
+                    <img src="img/qnet.png" alt="큐넷주관 정보처리기사" class="certificate__logo">
+                </a>
+                <h2 class="certificate__title">정보처리기사</h2>
+                <p class="certificate__acquisitionDay">2021.06.02</p>
             </div>
-            <div class="about__language">
-                <div class="language">
-                    <p class="language__title">JLPT</p>
-                    <p class="language__score">N1(148/180)</p>
-                    <p class="language__acquisitionDay">2021.07.04</p>
-                </div>
-                <div class="language">
-                    <p class="language__title">JPT</p>
-                    <p class="language__score">815/990</p>
-                    <p class="language__acquisitionDay">2018.08.05</p>
-                </div>
-                <div class="language">
-                    <p class="language__title">TOEIC</p>
-                    <p class="language__score">745/990</p>
-                    <p class="language__acquisitionDay">2021.06.12</p>
-                </div>
+            <div class="certificate">
+                <a href="https://www.icqa.or.kr">
+                    <img src="img//icqa.jpg" alt="icqa주관 네트워크관리사" class="certificate__logo">
+                </a>
+                <h2 class="certificate__title">네트워크관리사</h2>
+                <p class="certificate__acquisitionDay">2021.04.13</p>
+            </div>
+            <div class="certificate">
+                <a href="https://www.dataq.or.kr">
+                    <img src="img/sqld.png" alt="kdata주관 sqld" class="certificate__logo">
+                </a>
+                <h2 class="certificate__title">SQL개발자(SQLD)</h2>
+                <p class="certificate__acquisitionDay">2020.12.29</p>
+            </div>
+        </div>
+        <div class="about__languages">
+            <div class="language">
+                <a href="https://www.jlpt.or.kr">
+                    <img src="img/jlpt.png" alt="jlpt" class="language__logo">
+                </a>
+                <h2 class="language__title">JLPT</h2>
+                <p class="language__score">N1(148/180)</p>
+                <p class="language__acquisitionDay">2021.07.04</p>
+            </div>
+            <div class="language">
+                <a href="https://www.jpt.co.kr">
+                    <img src="img/jpt.jpg" alt="jpt" class="language__logo">
+                </a>
+                <h2 class="language__title">JPT</h2>
+                <p class="language__score">815/990</p>
+                <p class="language__acquisitionDay">2018.08.05</p>
+            </div>
+            <div class="language">
+                <a href="https://www.toeic.co.kr">
+                    <img src="img/toeic.jpg" alt="toeic" class="language__logo">
+                </a>
+                <h2 class="language__title">TOEIC</h2>
+                <p class="language__score">745/990</p>
+                <p class="language__acquisitionDay">2021.06.12</p>
             </div>
         </div>
     </section> 
     <!-- skill  -->
-    <section id="skills">
+    <section id="skills" class="section">
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
         <p>
@@ -197,7 +217,7 @@
         </div>
     </section>
     <!-- works -->
-    <section id ="works">
+    <section id ="works" class="section">
         <h1>My Work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
@@ -235,7 +255,7 @@
         </div>
     </section>
     <!-- contact -->
-    <section id="contact">
+    <section id="contact" class="section">
 
     </section>
 </body>
