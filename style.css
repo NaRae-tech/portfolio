@@ -217,6 +217,10 @@ p {
   justify-content: space-around;
   margin: 40px 0;
 }
+.about__certificates,
+.about__languages {
+  width: 370px;
+}
 .certificate,
 .language {
   display: flex;
@@ -343,6 +347,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-dark-white);
 }
 .project__img {
   max-width: 100%;
