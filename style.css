@@ -85,6 +85,7 @@ p {
   margin: 4px 0;
 }
 
+/*navbar*/
 #navbar {
   display: flex;
   justify-content: space-around;
@@ -123,6 +124,8 @@ p {
   border-radius: var(--size-border-radius);
   color: var(--color-black);
 }
+
+/*home section*/
 #home {
   padding: 40px;
   text-align: center;
@@ -147,6 +150,8 @@ p {
   border-radius: var(--size-border-radius);
   color: var(--color-white);
 }
+
+/*sections*/
 .section {
   padding: 80px;
   text-align: center;
@@ -157,6 +162,8 @@ p {
   border-radius: calc(var(--size-border-radius) * 10);
   background-color: var(--color-white);
 }
+
+/*about section*/
 .about__majors {
   display: flex;
   justify-content: space-between;
@@ -244,4 +251,46 @@ p {
 .language__acquisitionDay {
   color: var(--color-dark-gray);
   font-size: var(--font-small);
+}
+
+/*skills section*/
+.skillset {
+  display: flex;
+  background-color: var(--color-light-gray);
+  color: var(--color-light-white);
+  margin: 20px 0;
+}
+.skillset__title {
+  color: var(--color-white);
+}
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-gray);
+  padding: 20px 40px;
+}
+.skill {
+  margin-bottom: 32px;
+}
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+.skill__bar {
+  background-color: var(--color-gray);
+  width: 100%;
+  height: 3px;
+}
+.skill__value {
+  background-color: orange;
+  height: 3px;
+}
+.skillset__right {
+  flex-basis: 40%;
+}
+.tools {
+  background-color: var(--color-gray);
+}
+.tools,
+.etc {
+  padding: 20px;
 }
