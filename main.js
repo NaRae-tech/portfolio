@@ -92,7 +92,6 @@ let selectedNavItem = navItems[0];
 let selectedNavIndex = 0;
 
 function selectNavItem(selected) {
-    console.log(selectedNavItem);
     selectedNavItem.classList.remove('active');
     selectedNavItem = selected;
     selectedNavItem.classList.add('active');
@@ -132,3 +131,11 @@ window.addEventListener('wheel', () => {
     }
     selectNavItem(navItems[selectedNavIndex]);
 })
+
+const navbarLogo = document.querySelector(".navbar__logo");
+navbarLogo.addEventListener('click', () => {
+    console.log(navItems[sectionIds.indexOf("#home")]);
+    scrollIntoView("#home");
+    selectNavItem(navItems[sectionIds.indexOf("#home")]);
+});
+

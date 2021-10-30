@@ -109,6 +109,12 @@ p {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
+.navbar__logo p {
+  text-decoration: none;
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+}
 .navbar__logo img {
   width: 55px;
   height: 45px;
