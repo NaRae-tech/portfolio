@@ -235,7 +235,7 @@ p {
 }
 .about__certificates,
 .about__languages {
-  width: 370px;
+  width: 300px;
 }
 .certificate,
 .language {
@@ -324,6 +324,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 .category__btn:hover,
 .category__btn.selected {
@@ -343,9 +344,9 @@ p {
   height: 24px;
   display: inline-block;
   line-height: 24px;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration);
 }
@@ -485,8 +486,17 @@ p {
 }
 /*반응형 웹*/
 @media screen and (max-width: 768px) {
+  :root {
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
   .navbar__toggle-btn {
     display: block;
+    top: 32px;
+    right: 16px;
   }
   #navbar {
     flex-direction: column;
@@ -510,8 +520,16 @@ p {
   .about__etc {
     flex-direction: column;
   }
+  .about__majors {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
   .major {
-    margin: 38px;
+    margin-bottom: 30px;
+  }
+  .about__certificates,
+  .about__languages {
+    margin: auto;
   }
   .skillset {
     flex-direction: column;
@@ -519,12 +537,35 @@ p {
   .project {
     flex-grow: 1;
   }
-  #works {
-    padding-left: 10px;
-    padding-right: 10px;
+  .category__btn {
+    margin: 4px 0;
+  }
+  .section {
+    padding: 16px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
   }
   .testimonial__avatar {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+  }
+  .testimonial__avatar:nth-child(odd),
+  .testimonial__avatar:nth-child(even) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .testimonial__speech-bubble {
+    order: 1;
+  }
+  .up__arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    bottom: 16px;
+    right: 16px;
   }
 }
