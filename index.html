@@ -20,15 +20,13 @@
             <img src="img/main_logo-remove.png" alt="로고">
             <a href="#">ReA</a>
         </div>
-        <div class="navbar__menu">
-            <ul class="navbar__menu">
-                <li class="navbar__menu__item">Home</li>
-                <li class="navbar__menu__item">About</li>
-                <li class="navbar__menu__item">Skills</li>
-                <li class="navbar__menu__item">Works</li>
-                <li class="navbar__menu__item">Contact</li>
-            </ul>
-        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item" data-link="#home">Home</li>
+            <li class="navbar__menu__item" data-link="#about">About</li>
+            <li class="navbar__menu__item" data-link="#skills">Skills</li>
+            <li class="navbar__menu__item" data-link="#works">Works</li>
+            <li class="navbar__menu__item" data-link="#contact">Contact</li>
+        </ul>
         <button class="navbar__toggle-btn">
             <i class="fas fa-bars"></i>
         </button>
@@ -238,33 +236,33 @@
         <h1>My Work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-            <button class="category__btn">All<span class="category__count">4</span></button>
-            <button class="category__btn">VanillaJS<span class="category__count">3</span></button>
-            <button class="category__btn">React<span class="category__count">1</span></button>
+            <button class="category__btn selected" data-filter="*">All<span class="category__count">4</span></button>
+            <button class="category__btn" data-filter="vanillaJS">VanillaJS<span class="category__count">3</span></button>
+            <button class="category__btn" data-filter="react">React<span class="category__count">1</span></button>
         </div>
         <div class="work__projects">
-            <a href="https://github.com/NaRae-tech/movie_app" class="project" target="blank">
+            <a href="https://github.com/NaRae-tech/movie_app" class="project" target="blank" data-type="react">
                 <img src="img/project/movieReact.png" alt="movie app" class="project__img">
                 <div class="project__description">
                     <h3>Movie list</h3>
                     <span>Clone coding with React</span>
                 </div>
             </a>
-            <a href="https://github.com/NaRae-tech/mini_shopping_game" class="project" target="blank">
+            <a href="https://github.com/NaRae-tech/mini_shopping_game" class="project" target="blank" data-type="vanillaJS">
                 <img src="img/project/mini_shopping_game.png" alt="mini shopping game" class="project__img">
                 <div class="project__description">
                     <h3>Shopping mall mini_shopping_game</h3>
                     <span>HTML, CSS, JavaScript, Json</span>
                 </div>
             </a>
-            <a href="https://github.com/NaRae-tech/paint_canvas_js" class="project" target="blank">
+            <a href="https://github.com/NaRae-tech/paint_canvas_js" class="project" target="blank" data-type="vanillaJS">
                 <img src="img/project/canvasJS.png" alt="canvas" class="project__img">
                 <div class="project__description">
                     <h3>canvas page</h3>
                     <span>HTML, CSS, JavaScript</span>
                 </div>
             </a>
-            <a href="https://github.com/NaRae-tech/to_do_list_chrome_app" class="project" target="blank">
+            <a href="https://github.com/NaRae-tech/to_do_list_chrome_app" class="project" target="blank" data-type="vanillaJS">
                 <img src="img/project/to_do_list.png" alt="to do list" class="project__img">
                 <div class="project__description">
                     <h3>to do list</h3>
@@ -311,6 +309,8 @@
             2021 ReNa - All rights reserved
         </p>
     </section>
-
+    <button class="up__arrow">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>

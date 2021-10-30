@@ -87,17 +87,25 @@ p {
 
 /*navbar*/
 #navbar {
+  position: fixed;
   display: flex;
+  width: 100%;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--color-puple);
+  background-color: transparent;
   padding: 16px;
-  margin: 16px 0;
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
+}
+#navbar.navbar--dark {
+  padding: 8px;
+  background-color: var(--color-puple);
 }
 .navbar__logo {
   height: 60px;
   display: flex;
   align-items: center;
+  color: var(--color-white);
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
@@ -114,10 +122,9 @@ p {
   margin: 0 4px;
   cursor: pointer;
   color: var(--color-white);
-}
-.navbar__menu__item.active {
-  border: 1px solid var(--color-white);
-  border-radius: var(--size-border-radius);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: var(--color-border-radius);
 }
 .navbar__menu__item:hover {
   background-color: var(--color-light-puple);
@@ -126,7 +133,7 @@ p {
 }
 .navbar__toggle-btn {
   position: absolute;
-  top: 45px;
+  top: 30px;
   right: 32px;
   font-size: 24px;
   color: var(--color-white);
@@ -136,6 +143,7 @@ p {
 /*home section*/
 #home {
   padding: 40px;
+  padding-top: 150px;
   text-align: center;
 }
 .home__avatar {
@@ -318,7 +326,7 @@ p {
   padding: 8px 48px;
 }
 .category__btn:hover,
-.category__btn.active {
+.category__btn.selected {
   background-color: var(--color-dark-blue);
   color: var(--color-white);
 }
@@ -346,6 +354,12 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 .project {
   width: 280px;
@@ -356,6 +370,9 @@ p {
   justify-content: center;
   align-items: center;
   background-color: var(--color-dark-white);
+}
+.project.invisible {
+  display: none;
 }
 .project__img {
   max-width: 100%;
@@ -380,7 +397,7 @@ p {
   transform: translateY(0);
 }
 .project__description h3 {
-  color: var(--color-white);
+  color: orange;
 }
 .project__description h3:after {
   content: "";
@@ -388,8 +405,8 @@ p {
   position: relative;
   left: 50%;
   margin-top: 8px;
-  margin-left: -12px;
-  width: 25px;
+  transform: translateX(-50%);
+  width: 50px;
   height: 2px;
   background-color: var(--color-light-gray);
 }
@@ -447,6 +464,25 @@ p {
   transform: scale(1.1);
   color: var(--color-light-blue);
 }
+/*scroll*/
+.up__arrow {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: var(--color-white);
+  background-color: var(--color-light-puple);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--animation-duration) ease-in-out;
+}
+.up__arrow.visible {
+  pointer-events: auto;
+  opacity: 1;
+}
 /*반응형 웹*/
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
@@ -455,18 +491,27 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-puple);
+  }
+  #navbar.navbar--dark {
+    padding: 16px;
   }
   .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
+    display: none;
+  }
+  .navbar__menu.open {
+    display: block;
+    z-index: 1;
   }
   .about__majors,
   .about__etc {
     flex-direction: column;
   }
   .major {
-    margin: 38px 0;
+    margin: 38px;
   }
   .skillset {
     flex-direction: column;
