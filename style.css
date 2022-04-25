@@ -209,7 +209,15 @@ p {
 .major__icon i {
   transition: all var(--animation-duration) ease;
 }
-.major__icon:hover i {
+.major__icon img{
+  width:80px;
+  height:80px;
+  border-radius: 50%;
+  margin:45px 0;
+  transition: all var(--animation-duration) ease;
+}
+.major__icon:hover i,
+.major__icon:hover img {
   color: var(--color-light-blue);
   transform: rotate(360deg) scale(1.1);
 }
